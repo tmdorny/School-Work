@@ -1,0 +1,66 @@
+// Assignment 3 Trie class by Tim Dorny u0829896.
+// This class represents the Trie structure for word storage/retrieval.
+
+#include "Trie.h"
+using namespace std;
+
+// Default Constructor
+Trie::Trie(){
+    root = new TrieNode();
+}
+// Copy constructor
+Trie::Trie(const Trie& trie){
+    root = new TrieNode();
+    root = trie.root;
+
+}
+// Destructor
+Trie::~Trie(){
+    delete root;
+}
+
+void Trie::addWord(string word){
+    // TrieNode reference to deal with TrieNode manipulation.
+    TrieNode& currentNode = root;
+    for (char& c : word){
+        // Determine array index from char value
+        int index = c - 97;
+        // Move to the next node in the trie, if null, a new one will be created.
+        currentNode = currentNode.getNextNode(index);
+
+
+    }
+    currentNode.setEndOfWord();
+
+}
+
+bool Trie::isWord(string word){
+    // Start with root node.
+    TrieNode& currentNode = root;
+    // Variables to detect when word ends.
+    unsigned int wordLength = strlen(word);
+    int charCount = 1;
+    // Check if word is contained in trie.
+    for (char& c : word){
+        int index = c - 97;
+        if (currentNode.checkNextNode(index)){
+            // If the char index is not null, we move to the next node.
+            currentNode = currentNode.getNextNode(index);
+        }
+        // Once we hit the end of the nodes in trie, we check if we are at
+        // the end of the word. If so, we return tru.
+        else if(currentNode.isEndOfWord() && charCount == wordLength){
+            return true;
+        }
+        // If the index is null and the end of the word has not been reached,
+        // return false.
+        else{
+            // increment charCount
+        charCount++;
+    }
+
+}
+
+vector<std::string> Trie::allWordsWithPrefix(string prefix){
+
+}

@@ -1,0 +1,26 @@
+\documentstyle[11pt]{article}
+%\usepackage{listings}
+
+\title{A1 : C++ and Shell Warm-up}
+\author{Nick(Mykola) Pershyn}
+
+\begin{document}
+\maketitle{}
+a) This is the command I would use to make my program "\texttt{inch\_to\_cm}" convert numbers written in file "\texttt{in}" and write them to file "\texttt{out}":
+
+\begin{verbatim}
+./inch_to_cm < ./in > ./out
+\end{verbatim}
+
+b) This is the output:
+\begin{verbatim}
+0.299999999999999988897769753748
+\end{verbatim}
+
+In binary this number would require infinite amount of digits to represent, so when we enter \texttt{0.3} computer get the closest binary number. If I multiply that number by some power of two I would get an integer number.
+So "\texttt{0.3*256*256*256*256*256*256*64}" is exactly:
+\begin{verbatim}
+5404319552844595.000000000000000000000000000000
+\end{verbatim}
+
+\end{document} 

@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+/*
+  Implement sum() to summary an array of integers
+    - using `goto` and labels
+    - without using `for`, `while`, or `do`
+    - with only one-armed `if`s
+    - with only `goto` in the "then" part of `if`
+*/
+
+int sum(int *a, int len)
+{
+  int sum_so_far = 0;
+  int index = 0;
+
+ fakewhile:
+  if(index < len) goto doit;
+  return sum_so_far;
+
+ doit:
+  sum_so_far = sum_so_far + a[index];
+  index++;
+  goto fakewhile;
+}
+
+int a[] = {1, 2, 5, 7, 4, 6, 8, 0, 11};
+
+int main()
+{
+  int v = sum(a, sizeof(a) / sizeof(int));
+
+  printf("%d\n", v);
+
+  return 0;
+}

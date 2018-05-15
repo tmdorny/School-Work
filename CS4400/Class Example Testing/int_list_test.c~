@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct int_list {
+  int val;
+  struct int_list *next;
+} int_list;
+
+int sum_list(int_list *lst) {
+  int sum = 0;
+  while (lst != NULL) {
+    sum += lst->val;
+    lst = lst->next;
+  }
+  return sum;
+}
+
+int_list *array_to_list(int *a, int len) {
+  int_list *nota = NULL;
+  int_list *add = NULL;
+  int i = len - 1;
+  for (; i >= 0; i--){
+    add = nota;
+    nota = malloc(sizeof(int_list));
+    nota->val = a[i];
+    nota->next = add;  
+  }
+  return nota;
+}
+
+int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+int main() {
+  printf("%d\n", sum_list(array_to_list(a, 10)));
+  return 0;
+}

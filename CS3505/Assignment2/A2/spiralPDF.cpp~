@@ -1,0 +1,35 @@
+/*  Assignment 2 Spiral PDF Class. Written by Tim Dorny u0829896
+ This class creates a pdf with text displayed in a spiral pattern.*/
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+#include <math.h>
+#include "HaruPDF.h"
+#include "Spiral.h"
+#include "hpdf.h"
+int main (int argc, char **argv){
+
+    std::cout << "running\n";
+    // Build filename
+    char Text[256];
+    //strcpy (FileName, argv[0]);
+    //strcat (FileName, ".pdf");
+    std::cout << "runningtext\n";
+    HaruPDF pdf;
+    HPDF_SaveToFile (pdf.MainPdf, "aaa.pdf");
+    std::cout << "runningpdf\n";
+    strcpy (Text, argv[1]);
+    std::cout << "runningcopy\n";
+    std::cout << Text;
+    Spiral spiralGen = Spiral(0,0);
+    for (int i = 0; i < strlen(Text); i++){
+        pdf.PlaceCharacter(Text[i], spiralGen.get_text_x(), spiralGen.get_text_y(), spiralGen.get_spiral_angle(), spiralGen.get_text_angle());
+        spiralGen++;
+        std::cout << "runningcopy\n";
+        //std::cout << spiralGen;
+    }
+    std::cout << "runningsave\n";
+    pdf.SavePdf();
+
+}

@@ -1,0 +1,13 @@
+def expo(m, d, n):
+    # variable used to check the low bit of an integer
+    bit = 1
+    # number of bits in the exponent
+    bits = d.bit_length()
+
+    value = (m ^ 2) % n
+    for i in range(0, (bits - 2):
+        shifted_exponent = d >> (bits - (2 + i))
+        # If bit is high, square value and then multiply by m(only multiply by m if last bit)
+        # If bit is low, only square the value
+        
+    

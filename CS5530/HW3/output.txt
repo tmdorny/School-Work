@@ -1,0 +1,264 @@
+Script started on Mon 06 Mar 2017 03:09:14 AM MST
+]0;dorny@lab1-17:HW3[dorny@lab1-17 HW3]$ lscd ..[22Gpython a1.py[22Gcd PA1[K[22Gbg[Kemacs a1.py[22Gcd PA1-B[KB[Ka1[Kcs4480[22Gk[Kcd 'Test Malware'[22Ghandin cs4480 pa1_a PA1A.tar[22Gpython a1client.py[K[22Ghandin cs4480 pa1_a PA1A.tar[41G[K[22Gcd 'Test Malware'[K[22Gk[Kcd cs4480[25Ga1[KPA1B-B[22Gemacs a1.py[22Gbg[Kcd PA1[22Gpython a1.py[22Gcd ..[K[22Gls[K[Kmysql -h georgia.eng.utah.edu -u 5530user -p cs5530db
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+(B[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \g.
+(B[m(B[0;1mYour MySQL connection id is 3153
+Server version: 5.7.17 MySQL Community Server (GPL)
+
+(B[m(B[0;1mCopyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+(B[m(B[0;1mType 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+(B[m[?1034hMySQL [cs5530db]> source query.txt
++------+
+| age  |
++------+
+|   99 |
++------+
+(B[0;1m1 row in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+--------------------+------+
+| sname              | gpa  |
++--------------------+------+
+| Pierson, E.        |  3.5 |
+| Scott, Kim J.      |  3.8 |
+| Sather, Roberto B. |  2.2 |
+| Stanley, Leotha T. |  3.6 |
+| Jones, David S.    |  3.5 |
+| Paul, Mary W.      |  3.6 |
+| Soong, V.          |  3.5 |
+| Kellerman, S.      |  2.9 |
+| Korpel, E.         |  3.5 |
+| Emile, R.          |    2 |
+| Carter, Jimmy      |  3.5 |
+| Kissinger, Henry   |  3.4 |
+| Andrews, R.        |  2.8 |
+| Auen, B.           |  2.7 |
+| Shoemaker, A.      |  3.5 |
+| Fy, Clara I.       |    2 |
+| Heilskov, G.       |  2.5 |
+| Baskett, Wayse T.  |  2.1 |
++--------------------+------+
+(B[0;1m18 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+-------------------+----------------------+
+| sname             | dname                |
++-------------------+----------------------+
+| Bomber, C.        | Civil Engineering    |
+| Hamilton, S.      | Civil Engineering    |
+| Liu, Huihusan     | Civil Engineering    |
+| Kasten, Norman L. | Civil Engineering    |
+| Roger, Blotter N. | Civil Engineering    |
+| Natividad, A.     | Civil Engineering    |
+| Calcmity, J.      | Civil Engineering    |
+| Kennedy, Ed       | Civil Engineering    |
+| Fred, Edwin B.    | Civil Engineering    |
+| Caucutt, B.       | Civil Engineering    |
+| Smith, Ike Z.     | Civil Engineering    |
+| Birch, M.         | Civil Engineering    |
+| Baskett, Wayse T. | Sanitary Engineering |
++-------------------+----------------------+
+(B[0;1m13 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+-----------+
+| sname     |
++-----------+
+| Zappa, F. |
++-----------+
+(B[0;1m1 row in set (0.01 sec)
+(B[m(B[0;1m
+(B[m+------------------------+---------+--------------------+
+| dname                  | Average | Max Age Difference |
++------------------------+---------+--------------------+
+| Chemical Engineering   | 29.3636 |                 42 |
+| Civil Engineering      | 27.2500 |                 80 |
+| Computer Sciences      | 25.0417 |                 38 |
+| Industrial Engineering | 27.7000 |                 65 |
+| Mathematics            | 30.6316 |                 83 |
+| Sanitary Engineering   | 19.0000 |                  0 |
++------------------------+---------+--------------------+
+(B[0;1m6 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+-----------------------------------------+
+| Number of Students With Multiple Majors |
++-----------------------------------------+
+|                                       4 |
++-----------------------------------------+
+(B[0;1m1 row in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+--------------+
+| name         |
++--------------+
+| Hamilton, S. |
++--------------+
+(B[0;1m1 row in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+--------------+
+| sname        |
++--------------+
+| Fy, Clara I. |
+| Cool, J.     |
++--------------+
+(B[0;1m2 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m(B[0;1mEmpty set (0.00 sec)
+(B[m(B[0;1m
+(B[m+------------------------+---------+
+| dname                  | numphds |
++------------------------+---------+
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Chemical Engineering   |      32 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Civil Engineering      |      88 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Computer Sciences      |      47 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Industrial Engineering |      41 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Mathematics            |     129 |
+| Sanitary Engineering   |       3 |
++------------------------+---------+
+(B[0;1m121 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+-------------------+
+| sname             |
++-------------------+
+| Scott, Kim J.     |
+| Natividad, A.     |
+| Fred, Edwin B.    |
+| Altenhaus, Gloria |
+| Quarnty, G.       |
+| Andrus, J.        |
+| Longlastname, A.  |
+| Zappa, F.         |
+| Davis, Scott P.   |
++-------------------+
+(B[0;1m9 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[m+--------------+
+| pname        |
++--------------+
+| Jones, J.    |
+| Randolph, B. |
+| Robinson, T. |
++--------------+
+(B[0;1m3 rows in set (0.00 sec)
+(B[m(B[0;1m
+(B[mMySQL [cs5530db]> quit
+(B[0;1mBye
+(B[m]0;dorny@lab1-17:HW3[dorny@lab1-17 HW3]$ ^Dexit
+
+Script done on Mon 06 Mar 2017 03:10:52 AM MST

@@ -1,0 +1,18 @@
+#ifndef TRIE_IS_FUN
+#define TRIE_IS_FUN
+
+#include "TrieNode.h"
+
+class Trie {
+    TrieNode *root;
+public:
+    Trie();
+    Trie(const Trie& trie);
+    ~Trie();
+    // assignment=
+    void addWord (std::string word);
+    bool isWord (std::string word);
+    vector<std::string> allWordsWithPrefix(std::string);
+
+}
+#endif

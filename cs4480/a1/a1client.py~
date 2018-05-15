@@ -1,0 +1,10 @@
+from socket import *
+serverName = 'proxy'
+serverPort = 2113
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.connect((serverName, serverPort))
+request = raw_input('Enter HTTP request:')
+clientSocket.send(request)
+returnedRequest = clientSocket.recv(2048)
+print 'Got: ', returnedRequest, 'from sever lel'
+clientSocket.close()

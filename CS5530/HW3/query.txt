@@ -1,0 +1,57 @@
+Select s.age
+From student s
+Order By s.age DESC
+Limit 1;
+
+Select s.sname, s.gpa
+From student s, enroll e
+Where e.cno=302 AND s.sid=e.sid;
+
+Select s.sname, e.dname
+From student s, enroll e
+Where e.cno IN (
+Select c.cno
+From course c
+Where c.cname LIKE '%Advanced%')
+AND s.sid=e.sid;
+
+Select s.sname
+From student s, enroll e
+Where e.dname='Computer Sciences' AND e.sid=s.sid AND e.sid IN 
+	(Select e2.sid From enroll e2 Where e2.dname='Mathematics');
+
+Select m.dname, AVG(s.age) AS Average, MAX(s.age)-MIN(s.age) AS 'Max Age Difference'
+From major m, student s
+Where m.sid=s.sid
+Group By m.dname;
+
+Select Count(m.sid)-Count(DISTINCT m.sid) AS 'Number of Students With Multiple Majors'
+From major m;
+
+Select s.sname as name
+From student s, enroll e
+Where e.sid=s.sid
+Group By s.sname, s.sid
+Having Count(e.sid)=(Select Max(C) From (Select e2.sid, Count(*) AS C From enroll e2 Group By e2.sid) ct );
+
+
+Select s.sname
+From student s
+Where s.age=(Select MIN(s2.age) From student s2 Where s2.year=2) AND s.year=2;
+
+Select s.sid, s.sname, s.gpa
+From student s, (Select sid, Count(sid) as Count From (Select e.cno, e.sid From enroll e Where e.cno IN (Select a.cno From course a Where a.dname='Computer Sciences') Group By e.cno, e.sid) Z Group by sid) count, (Select Count(DISTINCT e2.cno) as classes From enroll e2 Where e2.cno IN (Select a2.cno From course a2 Where a2.dname='Computer Sciences')) total Where s.sid=count.sid AND count.Count=total.classes;
+
+Select d.dname, d.numphds From dept d, enroll e Where d.dname=e.dname AND e.cno NOT IN (Select c2.cno From course c2 Where c2.dname='Computer Science');
+
+Select s.sname From student s, (Select s2.year, Max(s2.gpa) as MaxGPA From student s2 Group By s2.year) gpas Where s.gpa=gpas.MaxGPA AND s.year=gpas.year;
+
+Select distinct sc.pname From section sc, (Select sc2.pname, Count(sc2.pname) as courses From section sc2 Group By sc2.pname) count Where sc.pname=count.pname AND count.courses=(Select Max(maxx) From (Select Count(sc3.pname) as maxx From section sc3 Group By sc3.pname) max);
+
+
+
+
+
+
+
+

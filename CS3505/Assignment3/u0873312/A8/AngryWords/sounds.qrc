@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/snd">
+        <file>Track.mp3</file>
+        <file>saw800.wav</file>
+    </qresource>
+    <qresource prefix="/graphics">
+        <file>graphics/word_background.png</file>
+        <file>graphics/background.png</file>
+        <file>graphics/angry.png</file>
+    </qresource>
+</RCC>

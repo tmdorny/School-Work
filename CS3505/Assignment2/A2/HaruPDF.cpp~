@@ -1,0 +1,65 @@
+/* Assignment 2 HaruPDF Class. Written by Tim Dorny u0829896.
+ This class provides base functionality in building a PDF file*/
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <iostream>
+#include "HaruPDF.h"
+#include "hpdf.h"
+    //HPDF_Doc MainPdf;
+    //HPDF_Page MainPage;
+    //char* Text;
+    //char PdfName[256];
+    //HPDF_Font MainFont;
+
+    // Creates the base pdf file.
+    HaruPDF::HaruPDF(){
+
+        // Create Filename.
+        // strcpy (PdfName, argv);
+        // strcat (PdfName, ".pdf");
+        // Create PDF
+        MainPdf = HPDF_New(NULL, NULL);
+        if (!MainPdf){
+            std::cout << "SOMETHING IS TERRIBLY WRONG!!!!!!\n";
+        }
+        // Create Page
+        MainPage = HPDF_AddPage (MainPdf);
+        // Format Page
+        HPDF_Page_SetSize (MainPage, HPDF_PAGE_SIZE_A5, HPDF_PAGE_PORTRAIT);
+        MainFont = HPDF_GetFont (MainPdf, "Courier-Bold", NULL);
+        HPDF_Page_SetTextLeading (MainPage, 20);
+        HPDF_Page_SetGrayStroke (MainPage, 0);
+        // Done
+    }
+
+    // Places characters on the provided location on the pdf.
+    void HaruPDF::PlaceCharacter(char text, double xPosition, double yPosition, double spiralAngle, double textAngle){
+        char txt[2];
+        double spiralRads = spiralAngle / (180 * 3.141592);
+        double textRads = textAngle / (180 * 3.131592);
+
+        //  HPDF_Page_SetTextMatrix(MainPage, cos(spiralRads), sin(spiralRads), -sin(spiralRads), cos(spiralRads), xPosition, yPosition);
+        HPDF_Page_SetTextMatrix(MainPage, 1, 1, 1, 1, 1, 1);
+        // Place character to print into txt
+        txt[0] = text;
+        txt[1] = 0;
+        std::cout << txt;
+        HPDF_Page_ShowText (MainPage, txt);
+
+
+    }
+    // Finalize PDF and save to file
+    void HaruPDF::SavePdf(){
+
+        const char * filename = "spiralPDF.pdf";
+        //PdfName = "spiralPDF.pdf";
+        HPDF_Page_EndText(MainPage);
+        // Save to file
+        HPDF_SaveToFile(MainPdf, filename);
+        std::cout << "haruSAVE !!!\n";
+        // Clean up
+        HPDF_Free (MainPdf);
+
+    }

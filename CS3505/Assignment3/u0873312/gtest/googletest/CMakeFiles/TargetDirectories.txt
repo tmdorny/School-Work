@@ -1,0 +1,2 @@
+/home/nick/github/u01014865/gtest/googletest/CMakeFiles/gtest.dir
+/home/nick/github/u01014865/gtest/googletest/CMakeFiles/gtest_main.dir

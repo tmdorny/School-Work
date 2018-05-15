@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3889066730/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3889066730.dir/build.make CMakeFiles/cmTryCompileExec3889066730.dir/build
+gmake[1]: Entering directory '/home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3889066730.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3889066730.dir/CheckSymbolExists.c.o   -c /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3889066730
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3889066730.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3889066730.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3889066730 -rdynamic 
+CMakeFiles/cmTryCompileExec3889066730.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3889066730.dir/build.make:91: recipe for target 'cmTryCompileExec3889066730' failed
+gmake[1]: *** [cmTryCompileExec3889066730] Error 1
+gmake[1]: Leaving directory '/home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp'
+Makefile:117: recipe for target 'cmTryCompileExec3889066730/fast' failed
+gmake: *** [cmTryCompileExec3889066730/fast] Error 2
+
+File /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1021221429/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1021221429.dir/build.make CMakeFiles/cmTryCompileExec1021221429.dir/build
+gmake[1]: Entering directory '/home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1021221429.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1021221429.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1021221429
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1021221429.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1021221429.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1021221429 -rdynamic -lpthreads 
+/usr/lib/gcc/x86_64-pc-linux-gnu/4.8.4/../../../../x86_64-pc-linux-gnu/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1021221429.dir/build.make:91: recipe for target 'cmTryCompileExec1021221429' failed
+gmake[1]: *** [cmTryCompileExec1021221429] Error 1
+gmake[1]: Leaving directory '/home/nick/github/u01014865/gtest/googletest/CMakeFiles/CMakeTmp'
+Makefile:117: recipe for target 'cmTryCompileExec1021221429/fast' failed
+gmake: *** [cmTryCompileExec1021221429/fast] Error 2
+
+

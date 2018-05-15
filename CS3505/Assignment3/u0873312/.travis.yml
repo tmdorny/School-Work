@@ -1,0 +1,26 @@
+install: true
+script:
+    - cd A8/AngryWords && rm -f Makefile
+    - qmake
+    - make clean
+    - make
+env:
+- CC=gcc-4.8 CXX=g++-4.8
+addons:
+  apt:
+    packages:
+    - g++-4.8
+    - gcc-4.8
+    - libsfml-dev
+    - qtbase5-dev
+    - qtdeclarative5-dev
+    - qttools5-dev-tools
+    - qt5-default
+    - qt5-qmake
+    - libasound2-dev
+    - libgstreamer0.10-dev
+    - libgstreamer-plugins-base0.10-dev
+    sources:
+    - ubuntu-toolchain-r-test
+    - ubuntu-sdk-team
+ 

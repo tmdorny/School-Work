@@ -1,0 +1,4 @@
+/home/nick/Programming/CS/Software Practice/googletest-master/googlemock/CMakeFiles/gmock.dir
+/home/nick/Programming/CS/Software Practice/googletest-master/googlemock/CMakeFiles/gmock_main.dir
+/home/nick/Programming/CS/Software Practice/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir
+/home/nick/Programming/CS/Software Practice/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir

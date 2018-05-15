@@ -1,0 +1,8 @@
+# Result is sometimes 1, sometimes 2 --- but don't get stuck for 1000 seconds
+
+/bin/echo 1 || /bin/echo 2 || /bin/echo 3 || /bin/echo 4 || /bin/bash -c "sleep 1000"
+
+# Expected output:
+#  1
+# OR
+#  2

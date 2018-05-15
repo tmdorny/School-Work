@@ -1,0 +1,25 @@
+--cpu Cortex-M0
+"lab8_timdorny\stm32f0xx_hal_pwr_ex.o"
+"lab8_timdorny\stm32f0xx_hal_rcc_ex.o"
+"lab8_timdorny\stm32f0xx_hal.o"
+"lab8_timdorny\stm32f0xx_hal_tim.o"
+"lab8_timdorny\stm32f0xx_hal_tim_ex.o"
+"lab8_timdorny\stm32f0xx_hal_cortex.o"
+"lab8_timdorny\stm32f0xx_hal_i2c_ex.o"
+"lab8_timdorny\stm32f0xx_hal_rcc.o"
+"lab8_timdorny\stm32f0xx_hal_dma.o"
+"lab8_timdorny\stm32f0xx_hal_flash_ex.o"
+"lab8_timdorny\stm32f0xx_hal_flash.o"
+"lab8_timdorny\stm32f0xx_hal_i2c.o"
+"lab8_timdorny\stm32f0xx_hal_pwr.o"
+"lab8_timdorny\stm32f0xx_hal_gpio.o"
+"lab8_timdorny\system_stm32f0xx.o"
+"lab8_timdorny\main.o"
+"lab8_timdorny\stm32f0xx_hal_msp.o"
+"lab8_timdorny\stm32f0xx_it.o"
+"lab8_timdorny\motor.o"
+"lab8_timdorny\startup_stm32f072xb.o"
+--library_type=microlib --strict --scatter "Lab8_TimDorny\Lab8_TimDorny.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Lab8_TimDorny.map" -o Lab8_TimDorny\Lab8_TimDorny.axf
